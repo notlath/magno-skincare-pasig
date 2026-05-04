@@ -11,19 +11,19 @@ const testimonials = [
   {
     name: "Maria S.",
     service: "Acne Management",
-    text: "After years of struggling with stubborn acne, the team at Magno Skin Care Clinic finally helped me achieve clear skin. The treatment was personalized and the results were amazing.",
+    text: "Super thankful kay Dr. Magno! After years of struggling with stubborn acne, she finally helped me achieve clear skin. Sobrang personalized ng treatment plan na binigay niya and the results are amazing.",
     rating: 5,
   },
   {
     name: "Jose R.",
     service: "Chemical Peeling",
-    text: "The chemical peeling treatment made such a noticeable difference. My skin looks brighter and more even-toned. The staff was very professional and made me feel comfortable throughout.",
+    text: "The chemical peeling treatment made such a noticeable difference. Ang laki ng na-brighten ng face ko and it looks much more even-toned. Dr. Magno is very professional and made me feel comfortable throughout the procedure.",
     rating: 5,
   },
   {
     name: "Ana L.",
     service: "RF Skin Tightening",
-    text: "I was impressed by the RF treatment results. The fine lines around my eyes have significantly reduced. Highly recommend this clinic for anyone looking for non-invasive skin rejuvenation.",
+    text: "I was so impressed by the RF treatment results. The fine lines around my eyes have significantly reduced. Highly recommend Dr. Magno to anyone looking for safe and effective anti-aging treatments dito sa Pasig.",
     rating: 5,
   },
 ] as const;
