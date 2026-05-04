@@ -47,10 +47,10 @@ export function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden bg-surface-container-low"
+      className="relative overflow-hidden bg-surface-container-low lg:min-h-[calc(100vh-72px)] flex items-center"
       id="hero-section"
     >
-      <div className="container-max grid grid-cols-1 lg:grid-cols-2 gap-12 items-center section-padding">
+      <div className="container-max grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full py-16 lg:py-20">
         {/* Text content */}
         <div className="flex flex-col gap-6">
           <span className="label-caps text-on-primary-fixed-variant">
