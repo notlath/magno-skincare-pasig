@@ -162,7 +162,7 @@ export default function AboutPage() {
               <Card className="border-outline-variant overflow-hidden max-w-sm" data-animate>
                 <div className="aspect-[4/5] relative overflow-hidden">
                   <Image
-                    src="/images/dr-elsa-magno.jpeg"
+                    src="/images/dr-elsa-magno.webp"
                     alt="Dr. Elsa Crisostomo Bautista-Magno, MD"
                     fill
                     className="object-cover"
@@ -174,8 +174,8 @@ export default function AboutPage() {
                     Lead Dermatologist & MD
                   </p>
                   <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
-                    With over 38 years of experience, Dr. Magno specializes in the treatment of 
-                    hair, skin, and nail infections. Practicing since 1988, she serves as the 
+                    With over 38 years of experience, Dr. Magno specializes in the treatment of
+                    hair, skin, and nail infections. Practicing since 1988, she serves as the
                     primary practitioner at Magno Skin Care Clinic.
                   </p>
                 </CardContent>
