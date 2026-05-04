@@ -13,7 +13,7 @@ export function AboutSnippet() {
         {/* Image */}
         <div className="relative aspect-[4/3] rounded-lg overflow-hidden" data-animate>
           <Image
-            src="/images/dermatology-treatment.png"
+            src="/images/dermatology-medical-treatment-pasig.png"
             alt="Dermatologist performing a skin examination with a dermatoscope at Magno Skin Care Clinic"
             fill
             sizes="(max-width: 1024px) 100vw, 50vw"

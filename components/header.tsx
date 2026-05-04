@@ -33,6 +33,7 @@ export function Header() {
               src="/images/magno-skin-care-clinic-logo.png"
               alt="Magno Skin Care Clinic Logo"
               fill
+              sizes="40px"
               className="object-contain"
               priority
             />

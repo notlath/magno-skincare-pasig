@@ -69,10 +69,10 @@ export default function AboutPage() {
           <div className="container-max grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden" data-animate>
               <Image
-                src="/images/clinic-hero.png"
+                src="/images/magno-skin-care-clinic-hero-pasig.png"
                 alt="Interior of Magno Skin Care Clinic showing the modern treatment room with marble countertop and dermascope"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 544px"
                 className="object-cover"
               />
             </div>
@@ -165,6 +165,7 @@ export default function AboutPage() {
                     src="/images/dr-elsa-magno.webp"
                     alt="Dr. Elsa Crisostomo Bautista-Magno, MD"
                     fill
+                    sizes="(max-width: 768px) 100vw, 384px"
                     className="object-cover"
                   />
                 </div>

@@ -3,6 +3,7 @@
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -29,34 +30,40 @@ const medicalServices = [
   {
     icon: ShieldCheckIcon,
     title: "Acne Management",
+    image: "/images/services/acne-treatment-pasig.jpg",
     description:
       "Comprehensive acne and pimple treatments, including targeted pimple injections.",
   },
   {
     icon: DropletIcon,
     title: "Fungal Infections",
+    image: "/images/services/fungal-skin-infection-treatment.webp",
     description:
       "Effective solutions for buni (ringworm), had-had (jock itch), and alipunga (athlete's foot).",
   },
   {
     icon: HeartPulseIcon,
     title: "Skin Conditions",
+    image: "/images/services/eczema-psoriasis-skin-conditions.webp",
     description: "Management of Eczema, Skin Allergies, and Psoriasis.",
   },
   {
     icon: SunIcon,
     title: "Pigmentation & Coloration",
+    image: "/images/services/melasma-pigmentation-treatment.jpg",
     description: "Treatments for Melasma and improvement of Vitiligo.",
   },
   {
     icon: ScissorsIcon,
     title: "Hair & Nail Care",
+    image: "/images/services/hair-and-nail-medical-care.jpeg",
     description:
       "Falling hair treatments and medical care for nail infections.",
   },
   {
     icon: ZapIcon,
     title: "Minor Procedures",
+    image: "/images/services/minor-dermatological-procedures.webp",
     description:
       "Keloid injections and Electrocautery for the safe removal of warts, syringoma, and milia.",
   },
@@ -66,24 +73,28 @@ const aestheticServices = [
   {
     icon: SmileIcon,
     title: "Facial Care",
+    image: "/images/services/medical-facial-skin-care.jpeg",
     description:
       "Deep-cleansing facial treatments for a refreshed complexion.",
   },
   {
     icon: SparklesIcon,
     title: "Exfoliation & Resurfacing",
+    image: "/images/services/chemical-peel-facial-resurfacing.webp",
     description:
       "Diamond Peeling and Chemical Peeling (available for both Face and Body).",
   },
   {
     icon: EyeIcon,
     title: "Laser Hair Reduction",
+    image: "/images/services/ipl-laser-hair-reduction-underarms.jpg",
     description:
       "IPL (Intense Pulsed Light) treatments for underarms.",
   },
   {
     icon: StethoscopeIcon,
     title: "Skin Tightening & Contouring",
+    image: "/images/services/radio-frequency-skin-tightening.webp",
     description:
       "RF (Radio Frequency) therapy to target fine lines, address sagging skin, and improve facial contour.",
   },
@@ -140,9 +151,19 @@ export default function ServicesPage() {
               {medicalServices.map((service) => (
                 <Card
                   key={service.title}
-                  className="border-outline-variant"
+                  className="border-outline-variant overflow-hidden group hover:shadow-md transition-all duration-300"
                   data-animate
                 >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover grayscale-[0.2] brightness-105 group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
+                  </div>
                   <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="flex items-center justify-center size-9 rounded-md bg-petal-pink/50">
@@ -194,9 +215,19 @@ export default function ServicesPage() {
               {aestheticServices.map((service) => (
                 <Card
                   key={service.title}
-                  className="border-outline-variant"
+                  className="border-outline-variant overflow-hidden group hover:shadow-md transition-all duration-300"
                   data-animate
                 >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-surface-container">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover grayscale-[0.2] brightness-105 group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-tertiary-container/5 pointer-events-none" />
+                  </div>
                   <CardHeader>
                     <div className="flex items-center gap-3">
                       <div className="flex items-center justify-center size-9 rounded-md bg-petal-pink/50">

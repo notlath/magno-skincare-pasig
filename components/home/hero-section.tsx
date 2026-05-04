@@ -53,10 +53,11 @@ export function HeroSection() {
       {/* Background Image with Filter and Blur */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/clinic-hero.png"
+          src="/images/magno-skin-care-clinic-hero-pasig.png"
           alt="Modern treatment room at Magno Skin Care Clinic"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         {/* Sophisticated glassmorphism overlay: Color filter + subtle blur */}
