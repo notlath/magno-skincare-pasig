@@ -6,6 +6,11 @@ Welcome to **Magno Skin Care Clinic**, your trusted partner in achieving healthy
 
 Whether you are seeking effective medical treatments for stubborn skin conditions or advanced aesthetic procedures to rejuvenate your appearance, our clinic is dedicated to delivering safe, evidence-based, and results-driven care. At Magno Skin Care Clinic, we believe that healthy skin is the foundation of confidence, and we are here to help you look and feel your absolute best.
 
+## Lead Dermatologist
+
+**Dr. Elsa Crisostomo Bautista-Magno, MD**
+Dr. Elsa B. Magno is a Philippine-based dermatologist with over 38 years of experience, specializing in the treatment of hair, skin, and nail infections. She has been practicing as a Dermatology MD since 1988 and is the primary practitioner at Magno Skin Care Clinic. The clinic also accepts various HMO accreditations.
+
 ---
 
 ## Our Services

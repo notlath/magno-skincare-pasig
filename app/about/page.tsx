@@ -143,7 +143,7 @@ export default function AboutPage() {
           <Separator />
         </div>
 
-        {/* Team — content needed */}
+        {/* Team */}
         <section className="section-padding bg-background" id="our-team">
           <div className="container-max flex flex-col gap-10">
             <div className="text-center max-w-2xl mx-auto" data-animate>
@@ -152,29 +152,31 @@ export default function AboutPage() {
               </span>
               <h2 className="mt-3 text-primary">Meet the Experts</h2>
               <p className="mt-4 text-on-surface-variant">
-                {/* [TODO: content] — Team member names, credentials, and photos
-                    are not available in BUSINESS-INFO.md. Please provide
-                    dermatologist names, qualifications, and headshot photos. */}
                 Our team of qualified dermatology professionals is dedicated to
-                providing the highest standard of skin care. Each member brings
-                specialized expertise and a genuine commitment to patient
-                well-being.
+                providing the highest standard of skin care. Led by Dr. Elsa Magno, 
+                we bring specialized expertise and a genuine commitment to patient well-being.
               </p>
             </div>
 
-            {/* [TODO: content] — Replace with actual team member cards once
-                names, credentials, and photos are provided. */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="border-petal-pink text-center" data-animate>
-                <CardContent className="pt-6">
-                  <div className="mx-auto size-24 rounded-full bg-surface-container-high mb-4" />
-                  <p className="text-sm font-medium text-foreground">
-                    {/* [TODO: content] — Dermatologist name */}
-                    Lead Dermatologist
+            <div className="flex justify-center">
+              <Card className="border-outline-variant overflow-hidden max-w-sm" data-animate>
+                <div className="aspect-[4/5] relative overflow-hidden">
+                  <Image
+                    src="/images/dr-elsa-magno.jpeg"
+                    alt="Dr. Elsa Crisostomo Bautista-Magno, MD"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardContent className="pt-6 text-center">
+                  <CardTitle className="text-lg">Dr. Elsa Crisostomo Bautista-Magno</CardTitle>
+                  <p className="text-sm font-medium text-primary mt-1">
+                    Lead Dermatologist & MD
                   </p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {/* [TODO: content] — Credentials */}
-                    Board-Certified Dermatologist
+                  <p className="text-xs text-muted-foreground mt-4 leading-relaxed">
+                    With over 38 years of experience, Dr. Magno specializes in the treatment of 
+                    hair, skin, and nail infections. Practicing since 1988, she serves as the 
+                    primary practitioner at Magno Skin Care Clinic.
                   </p>
                 </CardContent>
               </Card>
