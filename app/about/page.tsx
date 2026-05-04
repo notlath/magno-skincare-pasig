@@ -143,18 +143,18 @@ export default function AboutPage() {
           <Separator />
         </div>
 
-        {/* Team */}
-        <section className="section-padding bg-background" id="our-team">
+        {/* Lead Dermatologist */}
+        <section className="section-padding bg-background" id="lead-dermatologist">
           <div className="container-max flex flex-col gap-10">
             <div className="text-center max-w-2xl mx-auto" data-animate>
               <span className="label-caps text-on-primary-fixed-variant">
-                Our Team
+                Expert Care
               </span>
-              <h2 className="mt-3 text-primary">Meet the Experts</h2>
+              <h2 className="mt-3 text-primary">Meet Our Lead Dermatologist</h2>
               <p className="mt-4 text-on-surface-variant">
-                Our team of qualified dermatology professionals is dedicated to
-                providing the highest standard of skin care. Led by Dr. Elsa Magno, 
-                we bring specialized expertise and a genuine commitment to patient well-being.
+                At Magno Skin Care Clinic, we are dedicated to providing the highest
+                standard of medical and aesthetic dermatology. Our practice is led by
+                Dr. Elsa Magno, who brings decades of specialized expertise to every patient.
               </p>
             </div>
 
