@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: "/images/magno-skin-care-clinic-logo.png",
+    icon: "/images/magno-skin-care-clinic-logo.ico",
     apple: "/images/magno-skin-care-clinic-logo.png",
   },
   openGraph: {
