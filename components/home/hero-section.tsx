@@ -53,7 +53,7 @@ export function HeroSection() {
       {/* Background Image with Filter and Blur */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/magno-skin-care-clinic-hero-pasig.png"
+          src="/images/magno-skin-care-clinic-hero-pasig.jpg"
           alt="Modern treatment room at Magno Skin Care Clinic"
           fill
           priority
