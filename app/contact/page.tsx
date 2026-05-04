@@ -4,8 +4,6 @@ import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
   CardContent,
@@ -18,31 +16,10 @@ import {
   ClockIcon,
   PhoneIcon,
   MessageSquareIcon,
-  SendIcon,
 } from "lucide-react";
-import { type FormEvent, useState } from "react";
 
 export default function ContactPage() {
   const containerRef = useScrollReveal();
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const name = formData.get("name") as string;
-    const email = formData.get("email") as string;
-    const message = formData.get("message") as string;
-
-    // mailto fallback (no backend)
-    const subject = encodeURIComponent(
-      `Inquiry from ${name} — Magno Skin Care Clinic`
-    );
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    );
-    window.location.href = `mailto:contact@magnoskincareclinic.com?subject=${subject}&body=${body}`;
-    setSubmitted(true);
-  }
 
   return (
     <>
@@ -181,102 +158,46 @@ export default function ContactPage() {
               </Card>
             </div>
 
-            {/* Contact form */}
-            <div data-animate>
-              <Card className="border-outline-variant">
-                <CardHeader>
-                  <CardTitle>Send Us a Message</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {submitted ? (
-                    <div className="text-center py-8">
-                      <p className="text-lg font-medium text-primary">
-                        Thank you for reaching out!
-                      </p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        Your email client should open shortly. If it
-                        doesn&apos;t, please contact us directly at our phone
-                        numbers.
-                      </p>
-                      <Button
-                        variant="outline"
-                        className="mt-4"
-                        onClick={() => setSubmitted(false)}
-                      >
-                        Send Another Message
-                      </Button>
+            {/* Messenger Direct Contact */}
+            <div data-animate className="flex flex-col h-full">
+              <Card className="border-outline-variant flex-1 flex flex-col justify-center items-center text-center p-8 bg-surface-container-low overflow-hidden relative border-2 border-primary/10">
+                {/* Decorative background gradients */}
+                <div className="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-petal-pink/30 blur-3xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+                
+                <div className="z-10 flex flex-col items-center">
+                  <div className="flex items-center justify-center size-20 rounded-full bg-primary/10 mb-6 shadow-sm">
+                    <MessageSquareIcon className="size-10 text-primary" />
+                  </div>
+                  <CardTitle className="text-2xl mb-4 font-heading text-primary tracking-tight">Direct Message</CardTitle>
+                  <p className="text-on-surface-variant leading-relaxed mb-8 max-w-sm">
+                    We primarily handle inquiries, bookings, and consultations through our Facebook Messenger. It's fast, convenient, and allows us to serve you better.
+                  </p>
+                  <a
+                    href="https://magnoskincareclinic.com/messenger"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="lg" className="h-14 px-8 text-base shadow-md hover:shadow-lg transition-all hover:-translate-y-1" id="contact-messenger-cta">
+                      <MessageSquareIcon className="mr-2 size-5" />
+                      Chat on Messenger
+                    </Button>
+                  </a>
+                  
+                  <div className="mt-10 flex flex-col items-center gap-3 w-full">
+                    <div className="text-sm font-medium text-muted-foreground uppercase tracking-wider">Or Call Us Directly</div>
+                    <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-foreground">
+                      <a href="tel:09770315017" className="flex items-center gap-2 hover:text-primary transition-colors bg-background px-4 py-2 rounded-full shadow-sm border border-border/50">
+                        <PhoneIcon className="size-4 text-primary" />
+                        <span>0977 031 5017</span>
+                      </a>
+                      <a href="tel:09982941766" className="flex items-center gap-2 hover:text-primary transition-colors bg-background px-4 py-2 rounded-full shadow-sm border border-border/50">
+                        <PhoneIcon className="size-4 text-primary" />
+                        <span>0998 294 1766</span>
+                      </a>
                     </div>
-                  ) : (
-                    <form
-                      onSubmit={handleSubmit}
-                      className="flex flex-col gap-4"
-                      id="contact-form"
-                    >
-                      <div className="flex flex-col gap-1.5">
-                        <label
-                          htmlFor="contact-name"
-                          className="label-caps text-on-primary-fixed-variant"
-                        >
-                          Full Name
-                        </label>
-                        <Input
-                          id="contact-name"
-                          name="name"
-                          placeholder="Your full name"
-                          required
-                        />
-                      </div>
-                      <div className="flex flex-col gap-1.5">
-                        <label
-                          htmlFor="contact-email"
-                          className="label-caps text-on-primary-fixed-variant"
-                        >
-                          Email Address
-                        </label>
-                        <Input
-                          id="contact-email"
-                          name="email"
-                          type="email"
-                          placeholder="you@example.com"
-                          required
-                        />
-                      </div>
-                      <div className="flex flex-col gap-1.5">
-                        <label
-                          htmlFor="contact-phone"
-                          className="label-caps text-on-primary-fixed-variant"
-                        >
-                          Phone Number (Optional)
-                        </label>
-                        <Input
-                          id="contact-phone"
-                          name="phone"
-                          type="tel"
-                          placeholder="0917 123 4567"
-                        />
-                      </div>
-                      <div className="flex flex-col gap-1.5">
-                        <label
-                          htmlFor="contact-message"
-                          className="label-caps text-on-primary-fixed-variant"
-                        >
-                          Message
-                        </label>
-                        <Textarea
-                          id="contact-message"
-                          name="message"
-                          placeholder="Tell us about your skin concern or inquiry..."
-                          rows={5}
-                          required
-                        />
-                      </div>
-                      <Button type="submit" className="mt-2" id="contact-submit">
-                        <SendIcon data-icon="inline-start" />
-                        Send Message
-                      </Button>
-                    </form>
-                  )}
-                </CardContent>
+                  </div>
+                </div>
               </Card>
             </div>
           </div>
